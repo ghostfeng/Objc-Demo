@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1CBF87531EE53DAF00D75E80 /* HandPainting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBF87491EE53DAF00D75E80 /* HandPainting.framework */; };
+		1CBF87581EE53DAF00D75E80 /* HandPaintingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBF87571EE53DAF00D75E80 /* HandPaintingTests.m */; };
+		1CBF875A1EE53DAF00D75E80 /* HandPainting.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CBF874C1EE53DAF00D75E80 /* HandPainting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1CBF87651EE53E0000D75E80 /* Stroke.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CBF87631EE53E0000D75E80 /* Stroke.h */; };
+		1CBF87661EE53E0000D75E80 /* Stroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBF87641EE53E0000D75E80 /* Stroke.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1CBF87541EE53DAF00D75E80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CBF87401EE53DAF00D75E80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CBF87481EE53DAF00D75E80;
+			remoteInfo = HandPainting;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1CBF87491EE53DAF00D75E80 /* HandPainting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HandPainting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CBF874C1EE53DAF00D75E80 /* HandPainting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HandPainting.h; sourceTree = "<group>"; };
+		1CBF874D1EE53DAF00D75E80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CBF87521EE53DAF00D75E80 /* HandPaintingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandPaintingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CBF87571EE53DAF00D75E80 /* HandPaintingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HandPaintingTests.m; sourceTree = "<group>"; };
+		1CBF87591EE53DAF00D75E80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CBF87631EE53E0000D75E80 /* Stroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stroke.h; sourceTree = "<group>"; };
+		1CBF87641EE53E0000D75E80 /* Stroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stroke.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1CBF87451EE53DAF00D75E80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CBF874F1EE53DAF00D75E80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CBF87531EE53DAF00D75E80 /* HandPainting.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CBF873F1EE53DAF00D75E80 = {
+			isa = PBXGroup;
+			children = (
+				1CBF874B1EE53DAF00D75E80 /* HandPainting */,
+				1CBF87561EE53DAF00D75E80 /* HandPaintingTests */,
+				1CBF874A1EE53DAF00D75E80 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1CBF874A1EE53DAF00D75E80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1CBF87491EE53DAF00D75E80 /* HandPainting.framework */,
+				1CBF87521EE53DAF00D75E80 /* HandPaintingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1CBF874B1EE53DAF00D75E80 /* HandPainting */ = {
+			isa = PBXGroup;
+			children = (
+				1CBF874C1EE53DAF00D75E80 /* HandPainting.h */,
+				1CBF87631EE53E0000D75E80 /* Stroke.h */,
+				1CBF87641EE53E0000D75E80 /* Stroke.m */,
+				1CBF874D1EE53DAF00D75E80 /* Info.plist */,
+			);
+			path = HandPainting;
+			sourceTree = "<group>";
+		};
+		1CBF87561EE53DAF00D75E80 /* HandPaintingTests */ = {
+			isa = PBXGroup;
+			children = (
+				1CBF87571EE53DAF00D75E80 /* HandPaintingTests.m */,
+				1CBF87591EE53DAF00D75E80 /* Info.plist */,
+			);
+			path = HandPaintingTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1CBF87461EE53DAF00D75E80 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CBF87651EE53E0000D75E80 /* Stroke.h in Headers */,
+				1CBF875A1EE53DAF00D75E80 /* HandPainting.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1CBF87481EE53DAF00D75E80 /* HandPainting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CBF875D1EE53DAF00D75E80 /* Build configuration list for PBXNativeTarget "HandPainting" */;
+			buildPhases = (
+				1CBF87441EE53DAF00D75E80 /* Sources */,
+				1CBF87451EE53DAF00D75E80 /* Frameworks */,
+				1CBF87461EE53DAF00D75E80 /* Headers */,
+				1CBF87471EE53DAF00D75E80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HandPainting;
+			productName = HandPainting;
+			productReference = 1CBF87491EE53DAF00D75E80 /* HandPainting.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1CBF87511EE53DAF00D75E80 /* HandPaintingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CBF87601EE53DAF00D75E80 /* Build configuration list for PBXNativeTarget "HandPaintingTests" */;
+			buildPhases = (
+				1CBF874E1EE53DAF00D75E80 /* Sources */,
+				1CBF874F1EE53DAF00D75E80 /* Frameworks */,
+				1CBF87501EE53DAF00D75E80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1CBF87551EE53DAF00D75E80 /* PBXTargetDependency */,
+			);
+			name = HandPaintingTests;
+			productName = HandPaintingTests;
+			productReference = 1CBF87521EE53DAF00D75E80 /* HandPaintingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1CBF87401EE53DAF00D75E80 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Witgo;
+				TargetAttributes = {
+					1CBF87481EE53DAF00D75E80 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 7AWX2MRU3G;
+						ProvisioningStyle = Automatic;
+					};
+					1CBF87511EE53DAF00D75E80 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 7AWX2MRU3G;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1CBF87431EE53DAF00D75E80 /* Build configuration list for PBXProject "HandPainting" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1CBF873F1EE53DAF00D75E80;
+			productRefGroup = 1CBF874A1EE53DAF00D75E80 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1CBF87481EE53DAF00D75E80 /* HandPainting */,
+				1CBF87511EE53DAF00D75E80 /* HandPaintingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1CBF87471EE53DAF00D75E80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CBF87501EE53DAF00D75E80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1CBF87441EE53DAF00D75E80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CBF87661EE53E0000D75E80 /* Stroke.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CBF874E1EE53DAF00D75E80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CBF87581EE53DAF00D75E80 /* HandPaintingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1CBF87551EE53DAF00D75E80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1CBF87481EE53DAF00D75E80 /* HandPainting */;
+			targetProxy = 1CBF87541EE53DAF00D75E80 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1CBF875B1EE53DAF00D75E80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1CBF875C1EE53DAF00D75E80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1CBF875E1EE53DAF00D75E80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7AWX2MRU3G;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HandPainting/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.witgo.HandPainting;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1CBF875F1EE53DAF00D75E80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7AWX2MRU3G;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HandPainting/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.witgo.HandPainting;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		1CBF87611EE53DAF00D75E80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7AWX2MRU3G;
+				INFOPLIST_FILE = HandPaintingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.witgo.HandPaintingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1CBF87621EE53DAF00D75E80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 7AWX2MRU3G;
+				INFOPLIST_FILE = HandPaintingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.witgo.HandPaintingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1CBF87431EE53DAF00D75E80 /* Build configuration list for PBXProject "HandPainting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CBF875B1EE53DAF00D75E80 /* Debug */,
+				1CBF875C1EE53DAF00D75E80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CBF875D1EE53DAF00D75E80 /* Build configuration list for PBXNativeTarget "HandPainting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CBF875E1EE53DAF00D75E80 /* Debug */,
+				1CBF875F1EE53DAF00D75E80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1CBF87601EE53DAF00D75E80 /* Build configuration list for PBXNativeTarget "HandPaintingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CBF87611EE53DAF00D75E80 /* Debug */,
+				1CBF87621EE53DAF00D75E80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1CBF87401EE53DAF00D75E80 /* Project object */;
+}
