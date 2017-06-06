@@ -10,7 +10,7 @@
 		1CBF877C1EE54BE000D75E80 /* ImageHandPainting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBF87721EE54BE000D75E80 /* ImageHandPainting.framework */; };
 		1CBF87811EE54BE000D75E80 /* ImageHandPaintingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBF87801EE54BE000D75E80 /* ImageHandPaintingTests.m */; };
 		1CBF87831EE54BE000D75E80 /* ImageHandPainting.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CBF87751EE54BE000D75E80 /* ImageHandPainting.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1CBF878E1EE54C0600D75E80 /* Stroke.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CBF878C1EE54C0600D75E80 /* Stroke.h */; };
+		1CBF878E1EE54C0600D75E80 /* Stroke.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CBF878C1EE54C0600D75E80 /* Stroke.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1CBF878F1EE54C0600D75E80 /* Stroke.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBF878D1EE54C0600D75E80 /* Stroke.m */; };
 		1CBF87921EE54D3A00D75E80 /* UIImageView+HandPainting.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CBF87901EE54D3A00D75E80 /* UIImageView+HandPainting.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1CBF87931EE54D3A00D75E80 /* UIImageView+HandPainting.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBF87911EE54D3A00D75E80 /* UIImageView+HandPainting.m */; };
@@ -121,8 +121,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CBF878E1EE54C0600D75E80 /* Stroke.h in Headers */,
 				1CBF87921EE54D3A00D75E80 /* UIImageView+HandPainting.h in Headers */,
+				1CBF878E1EE54C0600D75E80 /* Stroke.h in Headers */,
 				1CBF87831EE54BE000D75E80 /* ImageHandPainting.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +428,7 @@
 				1CBF87881EE54BE000D75E80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1CBF87891EE54BE000D75E80 /* Build configuration list for PBXNativeTarget "ImageHandPaintingTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +437,7 @@
 				1CBF878B1EE54BE000D75E80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

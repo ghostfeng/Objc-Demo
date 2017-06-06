@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C40C74E1EE6855C00D537B3 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C40C74C1EE6855C00D537B3 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C40C74F1EE6855C00D537B3 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C40C74D1EE6855C00D537B3 /* Utils.m */; };
 		1CBF87AE1EE556D000D75E80 /* Snippets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBF87A41EE556D000D75E80 /* Snippets.framework */; };
 		1CBF87B31EE556D000D75E80 /* SnippetsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBF87B21EE556D000D75E80 /* SnippetsTests.m */; };
 		1CBF87B51EE556D000D75E80 /* Snippets.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CBF87A71EE556D000D75E80 /* Snippets.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C40C74C1EE6855C00D537B3 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		1C40C74D1EE6855C00D537B3 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		1CBF87A41EE556D000D75E80 /* Snippets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Snippets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CBF87A71EE556D000D75E80 /* Snippets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Snippets.h; sourceTree = "<group>"; };
 		1CBF87A81EE556D000D75E80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 			isa = PBXGroup;
 			children = (
 				1CBF87A71EE556D000D75E80 /* Snippets.h */,
+				1C40C74C1EE6855C00D537B3 /* Utils.h */,
+				1C40C74D1EE6855C00D537B3 /* Utils.m */,
 				1CBF87BE1EE5577600D75E80 /* UnitConversion.h */,
 				1CBF87BF1EE5577600D75E80 /* UnitConversion.m */,
 				1CBF87A81EE556D000D75E80 /* Info.plist */,
@@ -115,6 +121,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C40C74E1EE6855C00D537B3 /* Utils.h in Headers */,
 				1CBF87C01EE5577600D75E80 /* UnitConversion.h in Headers */,
 				1CBF87B51EE556D000D75E80 /* Snippets.h in Headers */,
 			);
@@ -220,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C40C74F1EE6855C00D537B3 /* Utils.m in Sources */,
 				1CBF87C11EE5577600D75E80 /* UnitConversion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +428,7 @@
 				1CBF87BA1EE556D000D75E80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1CBF87BB1EE556D000D75E80 /* Build configuration list for PBXNativeTarget "SnippetsTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +437,7 @@
 				1CBF87BD1EE556D000D75E80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

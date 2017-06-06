@@ -53,7 +53,7 @@
 
  @param point 点
  */
-- (void)passPoints:(CGPoint)point {
+- (void)passPoint:(CGPoint)point {
     if (!self.points.count) {
         self.path.lineWidth = self.lineWidth;
         [self.path moveToPoint:point];

@@ -20,7 +20,7 @@
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    UIImageView *img;
+    
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[YFTableViewController alloc] initWithStyle:UITableViewStyleGrouped]];
     return YES;
 }

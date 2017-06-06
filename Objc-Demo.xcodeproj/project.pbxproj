@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1887677F963FE8C2F4FE8DD9 /* Pods_Objc_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FB6A61759BEFC8D735C59A2 /* Pods_Objc_Demo.framework */; };
+		1C40C7521EE68C5D00D537B3 /* YFImageHandPaintingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C40C7511EE68C5D00D537B3 /* YFImageHandPaintingViewController.m */; };
 		1CBF87081EE5381300D75E80 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBF87071EE5381300D75E80 /* main.m */; };
 		1CBF870B1EE5381300D75E80 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBF870A1EE5381300D75E80 /* AppDelegate.m */; };
 		1CBF870E1EE5381300D75E80 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBF870D1EE5381300D75E80 /* ViewController.m */; };
@@ -38,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		0FB6A61759BEFC8D735C59A2 /* Pods_Objc_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Objc_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C40C7501EE68C5D00D537B3 /* YFImageHandPaintingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YFImageHandPaintingViewController.h; sourceTree = "<group>"; };
+		1C40C7511EE68C5D00D537B3 /* YFImageHandPaintingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YFImageHandPaintingViewController.m; sourceTree = "<group>"; };
 		1CBF87031EE5381300D75E80 /* Objc-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Objc-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CBF87071EE5381300D75E80 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1CBF87091EE5381300D75E80 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -158,6 +161,8 @@
 			children = (
 				1CBF873C1EE538A900D75E80 /* YFTableViewController.h */,
 				1CBF873D1EE538A900D75E80 /* YFTableViewController.m */,
+				1C40C7501EE68C5D00D537B3 /* YFImageHandPaintingViewController.h */,
+				1C40C7511EE68C5D00D537B3 /* YFImageHandPaintingViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -384,6 +389,7 @@
 				1CBF873E1EE538A900D75E80 /* YFTableViewController.m in Sources */,
 				1CBF870E1EE5381300D75E80 /* ViewController.m in Sources */,
 				1CBF870B1EE5381300D75E80 /* AppDelegate.m in Sources */,
+				1C40C7521EE68C5D00D537B3 /* YFImageHandPaintingViewController.m in Sources */,
 				1CBF87081EE5381300D75E80 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

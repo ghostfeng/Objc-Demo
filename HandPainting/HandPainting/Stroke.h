@@ -42,7 +42,7 @@ typedef NS_ENUM(NSInteger, StrokeStyle) {
  
  @param point 点
  */
-- (void)passPoints:(CGPoint)point;
+- (void)passPoint:(CGPoint)point;
 
 /**
  绘画

@@ -9,8 +9,9 @@
 
 
 #import "YFTableViewController.h"
+#import "YFImageHandPaintingViewController.h"
 
-typedef NS_ENUM(NSUInteger, Moudle) {
+typedef NS_ENUM(NSUInteger, Module) {
     Module_HandPainting = 0
 };
 
@@ -43,7 +44,7 @@ typedef NS_ENUM(NSUInteger, Moudle) {
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+//    return 0;
     return self.dataList.count;
 }
 
@@ -55,6 +56,22 @@ typedef NS_ENUM(NSUInteger, Moudle) {
     }
     cell.textLabel.text = [self.dataList[indexPath.row] objectForKey:@"name"];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self gotoDetailWithModule:[[self.dataList[indexPath.row] objectForKey:@"module"] integerValue]];
+}
+
+- (void)gotoDetailWithModule:(Module)module {
+    switch (module) {
+        case Module_HandPainting: {
+            [self.navigationController pushViewController:[[YFImageHandPaintingViewController alloc] init] animated:true];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 @end
