@@ -21,8 +21,8 @@
     self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 100, 320, 320)];
     self.imageView.image = [UIImage imageNamed:@"1"];
     [self.view addSubview:self.imageView];
-    Stroke *s = [[Stroke alloc] initWithColor:[UIColor redColor] lineWidth:10];
-    [self.imageView hp_initWidthInMM:3.0];
+    [self.imageView hp_initWidthInMM:2.0];
+    [self.imageView hp_chooseWithColor:[UIColor redColor] abstractScale:1.0];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class HandPainting;
+@class HandPainting, Stroke;
 
 @interface UIImageView (HandPainting)
 

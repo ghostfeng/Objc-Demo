@@ -16,6 +16,7 @@ FOUNDATION_EXPORT const unsigned char ImageHandPaintingVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <ImageHandPainting/PublicHeader.h>
 
+#import <Availability.h>
 #import <ImageHandPainting/UIImageView+HandPainting.h>
 #import <ImageHandPainting/Stroke.h>
 

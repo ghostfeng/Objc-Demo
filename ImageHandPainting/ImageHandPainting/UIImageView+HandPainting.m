@@ -331,7 +331,7 @@
  */
 - (void)layoutSublayersOfLayer:(CALayer *)layer{
     [self hp_reset4Painting];
-    [super layoutSublayersOfLayer:layer];
+//    [super layoutSublayersOfLayer:layer];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
