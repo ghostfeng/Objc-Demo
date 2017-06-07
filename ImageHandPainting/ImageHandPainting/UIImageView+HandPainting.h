@@ -8,12 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class HandPainting, Stroke;
-
 @interface UIImageView (HandPainting)
-
-/** 手绘操作对象 */
-@property (nonatomic, strong) HandPainting *hp;
 
 /**
  初始化绘图图层(注：在设置了Image之后，只能调用一次)

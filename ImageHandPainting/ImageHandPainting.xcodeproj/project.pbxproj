@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C89EE201EE7D92C00692773 /* Snippets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C89EE1F1EE7D92C00692773 /* Snippets.framework */; };
 		1CBF877C1EE54BE000D75E80 /* ImageHandPainting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBF87721EE54BE000D75E80 /* ImageHandPainting.framework */; };
 		1CBF87811EE54BE000D75E80 /* ImageHandPaintingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBF87801EE54BE000D75E80 /* ImageHandPaintingTests.m */; };
 		1CBF87831EE54BE000D75E80 /* ImageHandPainting.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CBF87751EE54BE000D75E80 /* ImageHandPainting.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C89EE1F1EE7D92C00692773 /* Snippets.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Snippets.framework; path = "../../../Library/Developer/Xcode/DerivedData/Objc-Demo-fmpcyqxfsofugqbqqmhssbtvizic/Build/Products/Debug-iphonesimulator/Snippets.framework"; sourceTree = "<group>"; };
 		1CBF87721EE54BE000D75E80 /* ImageHandPainting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImageHandPainting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CBF87751EE54BE000D75E80 /* ImageHandPainting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageHandPainting.h; sourceTree = "<group>"; };
 		1CBF87761EE54BE000D75E80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C89EE201EE7D92C00692773 /* Snippets.framework in Frameworks */,
 				1CBF87981EE5539900D75E80 /* Foundation.framework in Frameworks */,
 				1CBF87961EE5538F00D75E80 /* UIKit.framework in Frameworks */,
 			);
@@ -108,6 +111,7 @@
 		1CBF87941EE5538F00D75E80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1C89EE1F1EE7D92C00692773 /* Snippets.framework */,
 				1CBF87971EE5539900D75E80 /* Foundation.framework */,
 				1CBF87951EE5538F00D75E80 /* UIKit.framework */,
 			);

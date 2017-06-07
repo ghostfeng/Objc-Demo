@@ -20,6 +20,7 @@
 /** 笔划经过的点的集合 */
 @property (nonatomic, strong, readonly) NSMutableArray<NSValue *> *points;
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;
++ (instancetype)new UNAVAILABLE_ATTRIBUTE;
 - (instancetype)initWithColor:(UIColor *)color lineWidth:(CGFloat)lineWidth;
 
 /**

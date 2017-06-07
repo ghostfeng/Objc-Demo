@@ -228,6 +228,13 @@
 
 @end
 
+@interface UIImageView()
+
+/** 手绘操作对象 */
+@property (nonatomic, strong) HandPainting *hp;
+
+@end
+
 @implementation UIImageView (HandPainting)
 
 - (HandPainting *)hp {
