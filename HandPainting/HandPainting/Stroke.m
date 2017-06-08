@@ -64,7 +64,7 @@
     CGFloat dy = ABS(point.y - lastPoint.y);
     if (dx >= DD || dy >= DD) {
         [self.path addQuadCurveToPoint:CGPointMake((point.x + lastPoint.x) / 2.0, (point.y + lastPoint.y) / 2.0) controlPoint:lastPoint];
-        [self.points addObject:[NSValue valueWithCGPoint:lastPoint]];
+        [self.points addObject:[NSValue valueWithCGPoint:point]];
     }
 }
 

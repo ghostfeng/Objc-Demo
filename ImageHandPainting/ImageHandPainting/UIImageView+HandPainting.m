@@ -12,41 +12,61 @@
 #import <Foundation/Foundation.h>
 #import <Snippets/Snippets.h>
 
-@interface PanWithStartGestureRecognizer : UIPanGestureRecognizer
-@property (nonatomic) CGPoint start;
-@property (nonatomic) CGPoint point;
-@end
+@class HPGestureRecognizer;
+@protocol HPGestureRecognizerDelegate <NSObject>
 
-@implementation PanWithStartGestureRecognizer
-
-//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    self.start = [self locationInView:self.view];
-//}
-//
-//- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    self.point = [self locationInView:self.view];
-//}
-//
-//- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    
-//}
+@optional
+- (void)recognizer:(UIGestureRecognizer *)recognizer began:(CGPoint)began;
+- (void)recognizer:(UIGestureRecognizer *)recognizer moved:(CGPoint)moved;
+- (void)recognizer:(UIGestureRecognizer *)recognizer end:(CGPoint)end;
 
 @end
-
-
-@interface TapWithStartGestureRecognizer : UITapGestureRecognizer
-@property (nonatomic) CGPoint start;
+@interface HPGestureRecognizer : UIGestureRecognizer<UIGestureRecognizerDelegate>
+@property (nonatomic, weak) id<HPGestureRecognizerDelegate> hp_delegate;
+@property (nonatomic) CGPoint begin;
+@property (nonatomic) CGPoint move;
+@property (nonatomic) CGPoint end;
 @end
 
-@implementation TapWithStartGestureRecognizer
+@implementation HPGestureRecognizer
 
-//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    self.start = [self locationInView:self.view];
+- (instancetype)init {
+    if (self = [super init]) {
+//        self.delegate = self;
+    }
+    return self;
+}
+
+//#pragma mark - UIGestureRecognizerDelegate
+//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+//    NSLog(@"touchs = %zd",gestureRecognizer.numberOfTouches);
+//    return gestureRecognizer.numberOfTouches <= 1;
 //}
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    self.begin = [self locationInView:self.view];
+    if (self.hp_delegate && [self.hp_delegate respondsToSelector:@selector(recognizer:began:)]) {
+        [self.hp_delegate recognizer:self began:self.begin];
+    }
+}
+
+- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    self.move = [self locationInView:self.view];
+    if (self.hp_delegate && [self.hp_delegate respondsToSelector:@selector(recognizer:moved:)]) {
+        [self.hp_delegate recognizer:self moved:self.move];
+    }
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    self.end = [self locationInView:self.view];
+    if (self.hp_delegate && [self.hp_delegate respondsToSelector:@selector(recognizer:end:)]) {
+        [self.hp_delegate recognizer:self end:self.end];
+    }
+}
+
 @end
 
-@interface HandPainting : NSObject <CALayerDelegate>
+@interface HandPainting : NSObject <CALayerDelegate, HPGestureRecognizerDelegate>
 
 @property (nonatomic, strong) NSMutableArray<Stroke *> *redoList;
 @property (nonatomic, strong) NSMutableArray<Stroke *> *strokes;
@@ -55,8 +75,7 @@
 @property (nonatomic, assign) CGFloat currentScale;
 @property (nonatomic, assign) CGFloat abstractScale;
 @property (nonatomic, weak) CALayer *drawLayer;
-@property (nonatomic, strong) PanWithStartGestureRecognizer *pan;
-@property (nonatomic, strong) TapWithStartGestureRecognizer *tap;
+@property (nonatomic, strong) HPGestureRecognizer *recognizer;
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, assign) CGFloat widthInMM;
 
@@ -76,53 +95,24 @@
     return self;
 }
 
-#pragma mark - 行为识别
-//画线
-- (void)panning:(PanWithStartGestureRecognizer *)pan {
-    switch (pan.state) {
-        case UIGestureRecognizerStateChanged: {
-            if (self.currentStroke.points.count == 0) {
-                //画手指开始触摸的那一点
-                CGPoint p = [self.drawLayer convertPoint:pan.start fromLayer:self.imageView.layer];
-                // 将所画点的坐标按比例缩放
-                [self.currentStroke passPoint:CGPointMake(p.x / self.currentScale, p.y / self.currentScale)];
-            }
-            //画手指移动的点
-            CGPoint p = [self.drawLayer convertPoint:pan.point fromLayer:self.imageView.layer];
-            // 将所画点的坐标按比例缩放
-            [self.currentStroke passPoint:CGPointMake(p.x / self.currentScale, p.y / self.currentScale)];
-            [self.drawLayer setNeedsDisplay];
-        }
-            break;
-        case UIGestureRecognizerStateEnded:
-        case UIGestureRecognizerStateCancelled: {
-            //画手指离开的点
-            CGPoint p = [self.drawLayer convertPoint:pan.point fromLayer:self.imageView.layer];
-            [self.currentStroke passPoint:CGPointMake(p.x / self.currentScale, p.y / self.currentScale)];
-            [self.strokes addObject:self.currentStroke];
-            self.currentStroke = nil;
-            [self.drawLayer setNeedsDisplay];
-        }
-            break;
-        default:
-            break;
-    }
+#pragma mark - HPGestureRecognizerDelegate
+- (void)recognizer:(UIGestureRecognizer *)recognizer began:(CGPoint)began {
+    // 将所画点的坐标按比例缩放
+    [self.currentStroke passPoint:CGPointMake(began.x / self.currentScale, began.y / self.currentScale)];
+    [self.drawLayer setNeedsDisplay];
 }
 
-//画点
-- (void)tapping:(TapWithStartGestureRecognizer *)tap {
-    switch (tap.state) {
-        case UIGestureRecognizerStateEnded: {
-            CGPoint p = [self.drawLayer convertPoint:tap.start fromLayer:self.imageView.layer];
-            [self.currentStroke passPoint:CGPointMake(p.x / self.currentScale, p.y / self.currentScale)];
-            [self.strokes addObject:self.currentStroke];
-            self.currentStroke = nil;
-            [self.drawLayer setNeedsDisplay];
-        }
-            break;
-        default:
-            break;
-    }
+- (void)recognizer:(UIGestureRecognizer *)recognizer moved:(CGPoint)moved {
+    // 将所画点的坐标按比例缩放
+    [self.currentStroke passPoint:CGPointMake(moved.x / self.currentScale, moved.y / self.currentScale)];
+    [self.drawLayer setNeedsDisplay];
+}
+
+- (void)recognizer:(UIGestureRecognizer *)recognizer end:(CGPoint)end {
+    [self.currentStroke passPoint:CGPointMake(end.x / self.currentScale, end.y / self.currentScale)];
+    [self.drawLayer setNeedsDisplay];
+    [self.strokes addObject:self.currentStroke];
+    self.currentStroke = nil;
 }
 
 #pragma mark - CALayerDelegate
@@ -210,25 +200,17 @@
     return _strokes;
 }
 
-- (PanWithStartGestureRecognizer *)pan {
-    if (!_pan) {
-        _pan = [[PanWithStartGestureRecognizer alloc]initWithTarget:self action:@selector(panning:)];
-        _pan.maximumNumberOfTouches = 1;
+- (HPGestureRecognizer *)recognizer {
+    if (!_recognizer) {
+        _recognizer = [[HPGestureRecognizer alloc]init];
+        _recognizer.hp_delegate = self;
     }
-    return _pan;
-}
-
-- (TapWithStartGestureRecognizer *)tap {
-    if (!_tap) {
-        _tap = [[TapWithStartGestureRecognizer alloc]initWithTarget:self action:@selector(tapping:)];
-        [_tap requireGestureRecognizerToFail:self.pan];
-    }
-    return _tap;
+    return _recognizer;
 }
 
 @end
 
-@interface UIImageView()
+@interface UIImageView()<HPGestureRecognizerDelegate>
 
 /** 手绘操作对象 */
 @property (nonatomic, strong) HandPainting *hp;
@@ -260,6 +242,8 @@
     self.hp.drawLayer = drawLayer;
     [self.layer addSublayer:self.hp.drawLayer];
     [self.hp reset4Painting];
+    
+    [self addGestureRecognizer:self.hp.recognizer];
 }
 
 /**
@@ -272,11 +256,6 @@
     if (self.hp) {
         self.hp.currentColor =  color;
         [self.hp setAbstractScale:abstractScale];
-        
-        [self removeGestureRecognizer:self.hp.pan];
-        [self removeGestureRecognizer:self.hp.tap];
-        [self addGestureRecognizer:self.hp.pan];
-        [self addGestureRecognizer:self.hp.tap];
     }
 }
 
@@ -285,8 +264,7 @@
  */
 - (void)hp_unchoose {
     if (self.hp) {
-        [self removeGestureRecognizer:self.hp.pan];
-        [self removeGestureRecognizer:self.hp.tap];
+        [self removeGestureRecognizer:self.hp.recognizer];
     }
 }
 
@@ -337,23 +315,8 @@
  @param layer 图层
  */
 - (void)layoutSublayersOfLayer:(CALayer *)layer{
+    [super layoutSublayersOfLayer:layer];
     [self hp_reset4Painting];
-//    [super layoutSublayersOfLayer:layer];
 }
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [super touchesBegan:touches withEvent:event];
-    
-    self.hp.pan.start = [self.hp.pan locationInView:self];
-    self.hp.pan.point = self.hp.pan.start;
-    
-    self.hp.tap.start = [self.hp.tap locationInView:self];
-}
-
-- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [super touchesMoved:touches withEvent:event];
-    self.hp.pan.point = [self.hp.pan locationInView:self];
-}
-
 
 @end
