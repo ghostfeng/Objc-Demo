@@ -21,6 +21,14 @@
 @property (nonatomic, strong, readonly) NSMutableArray<NSValue *> *points;
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;
 + (instancetype)new UNAVAILABLE_ATTRIBUTE;
+    
+/**
+ 实例化笔划
+
+ @param color     笔划颜色
+ @param lineWidth 笔划宽度
+ @return 笔划实例
+ */
 - (instancetype)initWithColor:(UIColor *)color lineWidth:(CGFloat)lineWidth;
 
 /**
